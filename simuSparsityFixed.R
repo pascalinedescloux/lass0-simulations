@@ -237,9 +237,9 @@ results <- foreach(r = 1:R, .combine="comb", .multicombine=TRUE, .packages=c("gl
 names(dimnames(results)) <- c("criterion", "estimator", "rep")
 dimnames(results)$rep <- 1:R
 
-assign(paste0(type, ".sparsity", s, ".SNR", SNR), results)
-save(list=paste0(type,".sparsity", s, ".SNR", SNR), 
-     file=paste0(type,".sparsity", s, ".SNR", SNR, ".Rda"))
+assign(paste0(type, ".sparsity", s), results)
+save(list=paste0(type,".sparsity", s), 
+     file=paste0(type,".sparsity", s, ".Rda"))
 
 
 
