@@ -10,7 +10,7 @@
 #SBATCH --mail-user=descloup
 #SBATCH --mail-type=ALL
 #SBATCH --array=1-10
-#SBATCH --export=type="SmallGauss",ALL 
+#SBATCH --export=type="smallGauss",ALL 
 
 
 module load foss/2016b R/3.4.2
