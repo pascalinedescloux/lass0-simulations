@@ -5,7 +5,7 @@
 #SBATCH --partition=shared
 #SBATCH --time=00:10:00
 		# time for MCrep = 1000:
-		# smallGauss: <10 minutes
+		# smallGauss: <5 minutes
 		# wideGauss: <15 minutes
 #SBATCH --mail-user=descloup
 #SBATCH --mail-type=ALL
