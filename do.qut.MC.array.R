@@ -76,7 +76,7 @@ allMC <- foreach(r = 1:MCrep, .combine = "c", .packages = "lpSolve") %dopar% {
 
 MCoutput <- list()
 MCoutput$allMC <- allMC
-MCoutput$lass0setting <- list(q = q, M = M, sigma = NULL, intercept = intercept, 
+MCoutput$lass0settings <- list(q = q, M = M, sigma = NULL, intercept = intercept, 
                               standardizeX = standardizeX, standardizeG = standardizeG)
 
 
