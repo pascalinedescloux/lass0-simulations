@@ -5,7 +5,7 @@
 #SBATCH --partition=shared
 #SBATCH --time=02:00:00
 	# time for R = 500:
-	# smallGauss: < 30 minutes
+	# smallGauss: < 1h
 #SBATCH --mail-user=descloup
 #SBATCH --mail-type=ALL
 #SBATCH --array=0-20
