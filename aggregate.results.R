@@ -3,7 +3,7 @@
 library(abind)
 
 #######################
-type <- "smallGauss"
+type <- "wideGauss"
 s.values <- 0:20
 #######################
 

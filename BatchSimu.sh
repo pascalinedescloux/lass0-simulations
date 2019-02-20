@@ -6,9 +6,12 @@
 #SBATCH --time=02:00:00
 	# time for R = 500:
 	# smallGauss: < 1h
+	# wideGauss: ~4h
 #SBATCH --mail-user=descloup
 #SBATCH --mail-type=ALL
 #SBATCH --array=0-20
+	# smallGauss: 0-25?
+	# wideGauss: 0-20
 #SBATCH --export=type="smallGauss",ALL 
 
 module load foss/2016b R/3.4.2

@@ -1,8 +1,10 @@
 ## plots:
 
-type <- "smallGauss"
+type <- "wideGauss"
 load(paste0(type, ".Rda"))
-results <- apply(smallGauss, 1:3, mean)
+results <- get(type)
+rm(list=type)
+results <- apply(results, 1:3, mean)
 s.values <- as.numeric(dimnames(results)$sparsity)
 resnames <- dimnames(results)
 # removing MX-knockoffs with offset = 1:
@@ -23,6 +25,9 @@ matplot(s.values, results[, resnames$criterion == "supp.recovery", ],
 if (type == "smallGauss") {
     legend(x = 12, y = 1, legend = resnames$estimator, pch = pch.ix,
            lty = 1, col = col.ix, cex=1.3)
+} else if (type == "wideGauss") {
+    legend(x = 10, y = 1, legend = resnames$estimator, pch = pch.ix,
+           lty = 1, col = col.ix, cex=1.3)
 }
 par(mar=c(5, 4, 4, 2) + 0.1)
 
@@ -37,6 +42,9 @@ matplot(s.values, results[ , resnames$criterion == "tpp", ], type="b",
         pch=pch.ix, lty=1, xlab=xlab, ylab="", col=col.ix, cex.lab=2, cex.axis=1.5, cex.main=2)
 title(ylab="TPR", line=3, cex.lab=2)
 if (type == "smallGauss") {
+    legend(x = 0, y = 0.6, legend = resnames$estimator, col = col.ix, 
+           lty = 1, pch = pch.ix, cex = 0.75) 
+} else if (type == "wideGauss") {
     legend(x = 0, y = 0.6, legend = resnames$estimator, col = col.ix, 
            lty = 1, pch = pch.ix, cex = 0.75) 
 }
