@@ -151,7 +151,7 @@ results <- foreach(r = 1:R, .combine="comb", .multicombine=TRUE, .packages=c("gl
         lassoZero <- lass0(X, y, alpha = alpha, q = q, M = M,
                            standardizeX = standardizeX, standardizeG = standardizeG,
                            qut.MC.output = qut.MC.output, GEVapprox = GEVapprox,
-                           ols = ols) $coefficients
+                           ols = ols)$coefficients
         lassoZero <- sign(lassoZero)
         print(c(r, "end lasso-zero"))
     }

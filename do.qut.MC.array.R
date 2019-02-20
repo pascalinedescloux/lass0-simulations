@@ -70,7 +70,11 @@ allMC <- foreach(r = 1:MCrep, .combine = "c", .packages = "lpSolve") %dopar% {
     medBeta <- apply(Betas, 1, median)
     Gammas <- BPsols[-(1:p), ]
     gammas <- as.vector(Gammas)
-    madGammas <- mad(gammas[gammas != 0])
+    if (all(gammas == 0)) {
+        madGammas <- 0
+    } else {
+        madGammas <- mad(gammas[gammas != 0])
+    }
     max(abs(medBeta))/madGammas
 }
 
