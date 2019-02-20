@@ -1,7 +1,7 @@
 ## file to aggregated qut-MC results 
 ## (when performed in different joy arrays on baobab)
 
-type <- "smallGauss"
+type <- "wideGauss"
 arrays <- 1:10
 
 for (k in arrays) {
