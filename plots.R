@@ -1,6 +1,6 @@
 ## plots:
 
-type <- "wideGauss"
+type <- "riboflavin"
 load(paste0(type, ".Rda"))
 results <- get(type)
 rm(list=type)

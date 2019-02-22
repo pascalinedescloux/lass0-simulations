@@ -47,15 +47,17 @@ if (type %in% c("smallGauss", "wideGauss")) {
     # (For sign recovery: correct signs are given to true positives detected by stability selection and knockoff filter)
     # 
 } else if (type == "TV300") {
+    amp <- 2
     est.names <- c( "lassoZero", # QUT with pivotized statistics
                     "lasso", # note: when GIC is used, sigma is estimated with qut package
                     "SCAD", 
                     "wildBinarySeg")
 } else if (type == "riboflavin") {
+    amp <- 2
     est.names <- c("lassoZero",
                    "lasso", 
                    "SCAD",
-                   "stabilityselection")
+                   "stabilitySelection")
 }
 
 

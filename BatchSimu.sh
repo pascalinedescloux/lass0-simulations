@@ -6,7 +6,8 @@
 #SBATCH --time=02:00:00
 	# time for R = 500:
 	# smallGauss: < 1h
-	# wideGauss: ~4h
+	# wideGauss: ~4:00
+	# riboflavin: 4:30
 #SBATCH --mail-user=descloup
 #SBATCH --mail-type=ALL
 #SBATCH --array=0-20

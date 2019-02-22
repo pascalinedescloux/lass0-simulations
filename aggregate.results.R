@@ -3,8 +3,8 @@
 library(abind)
 
 #######################
-type <- "wideGauss"
-s.values <- 0:20
+type <- "riboflavin"
+s.values <- 0:10
 #######################
 
 for (s in s.values) {

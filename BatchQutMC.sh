@@ -7,6 +7,7 @@
 		# time for MCrep = 1000:
 		# smallGauss: <5 minutes
 		# wideGauss: <10 minutes
+		# riboflavin: < 50 minutes
 #SBATCH --mail-user=descloup
 #SBATCH --mail-type=ALL
 #SBATCH --array=1-10
