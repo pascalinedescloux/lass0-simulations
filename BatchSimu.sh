@@ -7,7 +7,7 @@
 	# time for R = 500:
 	# smallGauss: < 1h
 	# wideGauss: ~4:00
-	# riboflavin: 4:30
+	# riboflavin: ~4:30
 #SBATCH --mail-user=descloup
 #SBATCH --mail-type=ALL
 #SBATCH --array=0-20
