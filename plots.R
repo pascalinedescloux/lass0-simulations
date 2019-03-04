@@ -1,6 +1,6 @@
 ## plots:
 
-type <- "riboflavin"
+type <- "TV300"
 load(paste0(type, ".Rda"))
 results <- get(type)
 rm(list=type)
@@ -28,6 +28,9 @@ if (type == "smallGauss") {
 } else if (type == "wideGauss") {
     legend(x = 10, y = 1, legend = resnames$estimator, pch = pch.ix,
            lty = 1, col = col.ix, cex=1.3)
+} else if(type == "TV300") {
+    legend(x=5, y = 1, legend = resnames$estimator, pch = pch.ix,
+           lty = 1, col = col.ix, cex=1.3)
 }
 par(mar=c(5, 4, 4, 2) + 0.1)
 
@@ -46,6 +49,9 @@ if (type == "smallGauss") {
            lty = 1, pch = pch.ix, cex = 0.75) 
 } else if (type == "wideGauss") {
     legend(x = 0, y = 0.6, legend = resnames$estimator, col = col.ix, 
+           lty = 1, pch = pch.ix, cex = 0.75) 
+} else if (type == "TV300") {
+    legend(x = 0, y = 0.8, legend = resnames$estimator, col = col.ix, 
            lty = 1, pch = pch.ix, cex = 0.75) 
 }
 par(mfrow=c(1,1), mar=c(5, 4, 4, 2) + 0.1)

@@ -3,7 +3,7 @@
 library(abind)
 
 #######################
-type <- "riboflavin"
+type <- "TV300"
 s.values <- 0:10
 #######################
 

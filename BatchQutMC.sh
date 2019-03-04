@@ -8,7 +8,7 @@
 		# smallGauss: <5 minutes
 		# wideGauss: <10 minutes
 		# riboflavin: < 50 minutes
-		# TV300: <1h
+		# TV300: <1h 
 #SBATCH --mail-user=descloup
 #SBATCH --mail-type=ALL
 #SBATCH --array=1-10
