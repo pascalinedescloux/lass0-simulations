@@ -11,8 +11,6 @@ for (s in s.values) {
     load(paste0(type, ".sparsity", s, ".Rda"))
 }
 
-
-
 newArray <- abind(mget(paste0(type, ".sparsity", s.values)), along = 0)
 names(dimnames(newArray)) <- c("sparsity", "criterion", "estimator", "rep")
 dimnames(newArray)$rep <- 1:(dim(newArray)[length(dim(newArray))])

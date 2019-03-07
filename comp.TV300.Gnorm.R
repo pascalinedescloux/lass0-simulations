@@ -14,6 +14,7 @@ comp.TV300.Gnorm <- function(N = 1.e4, q, alpha, parallel = TRUE,
     #       if parallel =  FALSE, a numerical value.
     
     source("generateX.R")
+    set.seed(2019)
     X <- generateX(type = "TV300")
     n <- nrow(X)
     if (is.null(q)) q <- n

@@ -1,6 +1,6 @@
 ## plots:
 
-type <- "wideGauss"
+type <- "TV300"
 load(paste0(type, ".Rda"))
 results <- get(type)
 rm(list=type)

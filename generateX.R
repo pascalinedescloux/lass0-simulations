@@ -9,8 +9,6 @@ generateX <- function (type = c("smallGauss", "wideGauss", "TV300", "riboflavin"
     #   (mean-centered, but not standardized)
     # riboflavin: design matrix from riboflavin dataset, mean-centered and standardized
     
-    set.seed(2019)
-    
     if (type == "smallGauss") {
         n <- 100
         p <- 200

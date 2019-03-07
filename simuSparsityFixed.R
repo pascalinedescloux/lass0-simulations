@@ -10,6 +10,7 @@ s <- as.numeric(Sys.getenv("SLURM_ARRAY_TASK_ID"))
 type <- Sys.getenv("type") # "smallGauss", "wideGauss", "TV300", "riboflavin"
 ## design:
 source("generateX.R")
+set.seed(2019)
 X <- generateX(type = type)
 n <- nrow(X)
 p <- ncol(X) 

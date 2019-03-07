@@ -26,6 +26,7 @@ BP <- function(X, y) {
 }
 
 # design matrix:
+set.seed(2019)
 X <- generateX(type = type)
 n <- nrow(X)
 p <- ncol(X)
