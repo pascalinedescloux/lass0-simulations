@@ -3,8 +3,8 @@
 library(abind)
 
 #######################
-type <- "TV300"
-s.values <- 0:10
+type <- "wideGauss"
+s.values <- 0:15
 #######################
 
 for (s in s.values) {

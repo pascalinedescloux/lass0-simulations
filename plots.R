@@ -1,6 +1,6 @@
 ## plots:
 
-type <- "TV300"
+type <- "wideGauss"
 load(paste0(type, ".Rda"))
 results <- get(type)
 rm(list=type)
@@ -17,7 +17,7 @@ col.ix <- 1:length(resnames$estimator)
 xlab <- expression(s^0)
 
 # support recovery:
-par(mar=c(5, 6, 1, 1) + 0.1)
+par(mfrow=c(1,1), mar=c(5, 6, 1, 1) + 0.1)
 matplot(s.values, results[, resnames$criterion == "supp.recovery", ],
         type = "b", pch = pch.ix, lty = 1, main = "", xlab = xlab, 
         ylab = expression(P(hat(S) == S^0)), col = col.ix,
@@ -32,7 +32,7 @@ if (type == "smallGauss") {
     legend(x=5, y = 1, legend = resnames$estimator, pch = pch.ix,
            lty = 1, col = col.ix, cex=1.3)
 }
-par(mar=c(5, 4, 4, 2) + 0.1)
+par(mfrow=c(1,1), mar=c(5, 4, 4, 2) + 0.1)
 
 # fdr & tpr
 par(mfrow=c(2, 1), mar=c(5, 5, 1, 2) + 0.1)
