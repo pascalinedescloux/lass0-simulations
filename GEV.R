@@ -46,24 +46,6 @@ for(r in 1:R){
     GEVquantiles[r] <- Q(1-alpha, mu = GEVpars[1], sigma = GEVpars[2], xi = GEVpars[3])
 }
 
-# boxplot(t(estQuantiles))
-# abline(h=Pquantile)
-# boxplot(t(abs(estQuantiles-Pquantile)/Pquantile))
-
-
-# ## qqplot:
-# GEVfit <- gev.fit(x)
-# GEVpars <- GEVfit$mle
-# GUMfit <- gum.fit(x)
-# GUMpars <- GUMfit$mle
-
-# prob <- seq(1.e-4, 1-1.e-4, length=length(x))
-# plot(quantile(x, prob), Q(prob, mu=GEVpars[1], sigma=GEVpars[2], xi=GEVpars[3]), main="GEV QQplot")
-# abline(a=0, b=1, lty=2)
-# plot(quantile(x, prob), Q(prob, mu=GUMpars[1], sigma=GUMpars[2], xi=0), main="Gumbel QQplot")
-# abline(a=0, b=1, lty=2)
-
-
 ## plots:
 par(mfrow=c(1, 2))
 par(mar=c(5, 4, 4, 5))
