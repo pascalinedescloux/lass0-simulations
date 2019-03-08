@@ -1,8 +1,6 @@
 ###  Approximating the upper alpha quantile of P using a GEV fit:
 
 library(ismev) # for gev.fit function
-#library(ggplot2)
-#library(Renext)
 
 ## simulation setting:
 type <- "riboflavin" # "smallGauss", "wideGauss", "riboflavin", "TV300"
@@ -86,6 +84,4 @@ plot(quantile(x, prob), Q(prob, mu=GEVpars[1], sigma=GEVpars[2], xi=GEVpars[3]),
      main="Q-Q plot", xlab="empirical quantiles", ylab="GEV quantiles",
      cex.lab=2, cex.axis=1.5, cex.main=2)
 abline(a=0, b=1, lty=2)
-#Qmat <- apply(GEVparam, 2, function(pars) Q(p=prob, mu=pars[1], sigma=pars[2], xi=pars[3]))
-#matplot(quantile(x, prob), Qmat, type="p", pch=".", col=1)
 par(mfrow=c(1,1))
