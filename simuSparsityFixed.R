@@ -52,7 +52,8 @@ if (type %in% c("smallGauss", "wideGauss")) {
     est.names <- c( "lassoZero", # QUT with pivotized statistics
                     "lasso", # note: when GIC is used, sigma is estimated with qut package
                     "SCAD", 
-                    "wildBinarySeg")
+                    "wildBinarySeg",
+                    "knockoff.Xfixed.off0")
 } else if (type == "riboflavin") {
     amp <- 2
     est.names <- c("lassoZero",
@@ -111,7 +112,11 @@ qut.MC.output <- get(paste0("qutMC.", type))
 rm(list = paste0("qutMC.", type))
 
 ## knockoffs par
-stat.used <- stat.glmnet_coefdiff
+if (type == "TV300") {
+    stat.used <- stat.lasso_lambdasmax
+} else {
+    stat.used <- stat.glmnet_coefdiff
+}
 
 
 ## criteria
@@ -229,6 +234,18 @@ results <- foreach(r = 1:R, .combine="comb", .multicombine=TRUE, .packages=c("gl
         wildBinarySeg[wbs.td] <- sign(beta[wbs.td])
         wildBinarySeg[wbs.fd] <- 1 
         print(c(r, "end wild binary seg"))
+    }
+    if("knockoff.Xfixed.off0" %in% est.names){
+        knockoff.Xfixed.off0 <- knockoff.filter(X, y, knockoffs = create.fixed,
+                                           statistic = stat.used,
+                                           fdr = alpha, offset = 0)$selected
+        
+        
+        Xfixed.off0.td <- knockoff.Xfixed.off0[which(beta[knockoff.Xfixed.off0] != 0)] # true discoveries
+        Xfixed.off0.fd <- knockoff.Xfixed.off0[which(beta[knockoff.Xfixed.off0] == 0)] # false discoveries
+        knockoff.Xfixed.off0 <- rep(0, p)
+        knockoff.Xfixed.off0[Xfixed.off0.td] <- sign(beta[Xfixed.off0.td])
+        knockoff.Xfixed.off0[Xfixed.off0.fd] <- 1 # (anything different from 0)
     }
     
     all.est <- do.call(list, mget(est.names))
