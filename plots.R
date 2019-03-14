@@ -31,7 +31,7 @@ col.ix <- all.col[match(dimnames(results)$estimator, all.est)]
 xlab <- expression(s^0)
 
 # support recovery:
-par(mfrow=c(1,1), mar=c(5, 6, 4, 1) + 0.1)
+par(mfrow=c(1,1), mar=c(4, 6, 4, 1) + 0.1)
 matplot(s.values, results[, resnames$criterion == "supp.recovery", ],
         type = "b", pch = pch.ix, lty = 1, main = "", xlab = xlab, 
         ylim = c(0, 1),

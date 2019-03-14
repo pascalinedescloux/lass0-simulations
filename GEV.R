@@ -3,7 +3,7 @@
 library(ismev) # for gev.fit function
 
 ## simulation setting:
-type <- "riboflavin" # "smallGauss", "wideGauss", "riboflavin", "TV300"
+type <- "TV300" # "smallGauss", "wideGauss", "riboflavin", "TV300"
 
 ## alpha value:
 alpha <- 0.01
