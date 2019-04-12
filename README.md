@@ -13,5 +13,5 @@ install_github(repo="pascalinedescloux/lasso-zero", subdir="lass0")
 ```
 
 ### Simulations:
-Contains the code that generated all figures of the paper (adapted for running on the Baobab cluster of University of Geneva). 
+Contains the code that generated all figures of the paper (some adapted for running on the Baobab cluster of University of Geneva). 
 The main script simuSparsityFixed.R runs a simulation for fixed design matrix and sparsity index s.
