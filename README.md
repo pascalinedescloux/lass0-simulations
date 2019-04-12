@@ -1,4 +1,4 @@
-# lasso-zero
+# Lasso-Zero
 ## Pascaline Descloux, Sylvain Sardy
 
 R package and simulations for Lasso-Zero, a new variable selection method for (high-dimensional) linear regression.
