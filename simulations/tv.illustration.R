@@ -45,8 +45,9 @@ M30sol <- lass0(X, yc, tau = 0, q = n, M = 30, standardizeX = FALSE,
 
 
 
-par(mar=c(5, 4, 2, 0.5) + 0.1)
-ylab <- expression(hat(beta)[j]^"\u2113"[1])
+par(mar=c(5, 6, 2, 0.5) + 0.1)
+#ylab <- expression(hat(beta)[j]^"\u2113"[1])
+ylab <- expression(hat(beta)[j]^"med")
 
 ## BP:
 plot(BPsol, col=1+(1:p)%in%S,
