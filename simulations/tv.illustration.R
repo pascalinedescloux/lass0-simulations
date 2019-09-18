@@ -54,6 +54,7 @@ plot(BPsol, col=1+(1:p)%in%S,
      xlab="j", ylab="", type="h", cex.lab=1.5)
 segments(x0=S, y0=rep(0, s), x1=S, y1=BPsol[S],
          col=2, lwd=2)
+points(x=S, y=BPsol[S], col=2, pch=8, cex =1.5)
 mtext(ylab, side=2, line=2, las=2, cex=2, at=1)
 
 ## M = 1:
@@ -61,6 +62,7 @@ plot(M1sol, col=1+(1:p)%in%S,
      xlab="j", ylab="", type="h", cex.lab=1.5)
 segments(x0=S, y0=rep(0, s), x1=S, y1=M1sol[S],
          col=2, lwd=2)
+points(x=S, y=M1sol[S], col=2, pch=8, cex =1.5)
 mtext(ylab, side=2, line=2, las=2, cex=2, at=1)
 
 ## M = 30:
@@ -68,6 +70,7 @@ plot(M30sol, col=1+(1:p)%in%S,
      xlab="j", ylab="", type="h", cex.lab=1.5)
 segments(x0=S, y0=rep(0, s), x1=S, y1=M30sol[S],
          col=2, lwd=2)
+points(x=S, y=M30sol[S], col=2, pch=8, cex =1.5)
 mtext(ylab, side=2, line=2, las=2, cex=2, at=1)
 
 par(mar=c(5, 4, 4, 2) + 0.1)
